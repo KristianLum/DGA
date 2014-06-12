@@ -19,7 +19,7 @@
 # along with DGA.  If not, see <http://www.gnu.org/licenses/>.
 
 #test madigan and york 3 way spina bifida example
-source("~/Dropbox (Personal)/Projects/Capture-Recapture/DGA/R/src/BMAfunctions.R")
+source("BMAfunctions.R")
 
 p <- 5
 delta <- .5
@@ -30,7 +30,7 @@ N <- Nmissing + sum(Y)
 
 
 
-load(paste("~/Dropbox (Personal)/Projects/Capture-Recapture/DGA/R/output/graphs", p, '.Rdata', sep='')) #loads graphs
+load(paste("graphs", p, '.Rdata', sep='')) #loads graphs
 #######
 time <- proc.time()
 weights <- BMAfunction(Y,  Nmissing, delta, graphs)
